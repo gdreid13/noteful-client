@@ -1,4 +1,5 @@
 import React from 'react'
+// import { findNote } from '../notes-helpers'
 import { Link } from 'react-router-dom'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -38,6 +39,7 @@ export default class Note extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     const { name, id, modified } = this.props
     return (
       <div className='Note'>
