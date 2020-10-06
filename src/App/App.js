@@ -93,6 +93,7 @@ class App extends Component {
   }
 
   renderMainRoutes() {
+    console.log(this.state)
     return (
       <>
         {['/', '/folder/:folderId'].map(path =>
@@ -127,6 +128,7 @@ class App extends Component {
       addNote: this.handleAddNote,
       deleteNote: this.handleDeleteNote,
     }
+    console.log(value)
     return (
       <ApiContext.Provider value={value}>
         <div className='App'>
