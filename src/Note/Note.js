@@ -8,6 +8,10 @@ import config from '../config'
 import './Note.css'
 
 export default class Note extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
   static defaultProps ={
     onDeleteNote: () => {},
   }

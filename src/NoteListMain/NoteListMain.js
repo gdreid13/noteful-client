@@ -19,10 +19,8 @@ export default class NoteListMain extends React.Component {
   static contextType = ApiContext
 
   render() {
-    console.log(this.props)
     const folder_id = this.props.match.params.folderId
     const { notes = [] } = this.context
-    console.log(folder_id, { notes })
     const notesForFolder = getNotesForFolder(notes, folder_id)
     return (
       <section className='NoteListMain'>

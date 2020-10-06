@@ -5,6 +5,10 @@ import { findNote } from '../notes-helpers'
 import './NotePageMain.css'
 
 export default class NotePageMain extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
   static defaultProps = {
     match: {
       params: {}
@@ -17,9 +21,11 @@ export default class NotePageMain extends React.Component {
   }
 
   render() {
-    const { notes=[] } = this.context
-    const { id } = this.props.match.params
+    console.log(this.props)
+    const { notes = [] } = this.context
+    const id = this.props.match.params.noteId
     const note = findNote(notes, id) || { content: '' }
+    console.log(id, note)
     return (
       <section className='NotePageMain'>
         <Note
