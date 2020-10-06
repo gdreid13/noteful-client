@@ -34,6 +34,7 @@ export default class NoteListMain extends React.Component {
                     name={note.name}
                     modified={note.modified}
                     content={note.content}
+                    handleDeleteNote={value.handleDeleteNote}
                   />
                 </li>
               )}
